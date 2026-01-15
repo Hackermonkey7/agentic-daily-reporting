@@ -1,0 +1,77 @@
+{
+  "ticker": "BTC-USD",
+  "start_date": "2022-06-30",
+  "end_inclusive": "2025-09-30",
+  "seasonal_m": 7,
+  "val_h": 30,
+  "primary_metric": "MAPE",
+  "grids": {
+    "alpha": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "beta": [
+      0.01,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "gamma": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "phi": [
+      0.8,
+      0.9,
+      0.95,
+      0.98
+    ],
+    "arima_p": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "arima_d": [
+      0,
+      1
+    ],
+    "arima_q": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sarima_p": [
+      0,
+      1
+    ],
+    "sarima_d": [
+      0,
+      1
+    ],
+    "sarima_q": [
+      0,
+      1
+    ],
+    "sarima_m": 7
+  },
+  "outputs": {
+    "base": "C:\\Users\\rog\\Desktop\\btc_models_outputs",
+    "csv": "C:\\Users\\rog\\Desktop\\btc_models_outputs/csv",
+    "fig": "C:\\Users\\rog\\Desktop\\btc_models_outputs/fig",
+    "html": "C:\\Users\\rog\\Desktop\\btc_models_outputs/html",
+    "logs": "C:\\Users\\rog\\Desktop\\btc_models_outputs/logs"
+  },
+  "seed": 42,
+  "generated_at_utc": "2025-10-16T10:29:29+00:00"
+}
