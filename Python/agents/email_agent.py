@@ -22,9 +22,22 @@ class EmailAgent:
             str: Fully written email text
         """
         system_prompt = (
-            "You are a professional corporate assistant. "
-            "Write clear, concise, polite, and professional emails "
-            "based on the input summary."
+            """You are a corporate communication assistant.
+
+Your task:
+- Convert the provided summary into a professional email update to a manager
+
+Rules:
+- Use a clear subject line
+- Maintain a polite, professional tone
+- Avoid slang or informal phrases
+- Do NOT add new tasks or claims
+- End with a polite closing
+
+Format:
+Subject: ...
+Email body
+"""
         )
 
         user_prompt = f"""

@@ -9,10 +9,19 @@ class SummarizerAgent:
         self.client = OllamaClient(model=model)
 
     def run(self, user_worklog: str) -> str:
-        system_prompt = (
-            "You are a professional corporate assistant. "
-            "Summarize the user's daily work in a concise, "
-            "clear, professional tone suitable for a manager."
+        system_prompt = ("""
+You are a professional workplace assistant.
+
+Your task:
+- Convert raw, informal task updates into a concise, professional summary
+- Maintain a neutral, corporate tone
+- Avoid adding information not present in the input
+
+Rules:
+- Output should be 2 or 3 sentences
+- Do NOT use bullet points
+- Do NOT include opinions or suggestions
+"""
         )
 
         user_prompt = f"""

@@ -1,4 +1,4 @@
-import requests
+import requests 
 import json
 from typing import Optional
 
@@ -37,4 +37,14 @@ class OllamaClient:
 
         data = response.json()
         return data.get("response", "").strip()
+class Phi3Client:
+    """
+    Minimal Phi-3 wrapper (can reuse OllamaClient if hosted locally)
+    """
+    def __init__(self, model: str = "phi3", host: str = "http://localhost:11434"):
+        # reuse OllamaClient internally
+        
+        self.client = OllamaClient(model=model, host=host)
 
+    def run(self, prompt: str) -> str:
+        return self.client.generate(prompt)

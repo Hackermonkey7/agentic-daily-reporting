@@ -17,9 +17,17 @@ class EvaluatorAgent:
             str: Evaluation text from the LLM
         """
         system_prompt = (
-            "You are an expert corporate reviewer. "
-            "Evaluate the following email for professionalism, clarity, conciseness, "
-            "grammar, and readability. Provide feedback in a clear, structured format."
+            """You are a senior manager evaluating written communication.
+
+Your task:
+- Assess professionalism and clarity of the email
+
+Rules:
+- Provide a professionalism score out of 10
+- List strengths first
+- Then list improvement suggestions
+- Be constructive and concise
+"""
         )
 
         user_prompt = f"""
